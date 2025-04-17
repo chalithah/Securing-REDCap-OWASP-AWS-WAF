@@ -6,12 +6,16 @@ This repository documents the implementation of robust security measures for sec
 
 After deploying REDCap on AWS, I faced a significant security challenge: a DDoS attack. This project describes how AWS WAF, supplemented with Fortinet Managed Rules, was employed to enhance security, reduce malicious activity, and stabilize the application environment.
 
+![Elastic Dashboard](images/AWS_WAF_diagram.png)
 ## Identifying the Problem
 
 The REDCap deployment quickly became targeted by attackers, evident through:
 - **High HTTP 4xx error rates** causing fluctuating server health.
+ ![Elastic Dashboard](images/HTTP_4xx_Errors.png) 
 - **Frequent access attempts** for sensitive or non-existent files.
+  ![Elastic Dashboard](images/Frequent_Requests.png)
 - **404 errors** for configuration files indicating malicious probing.
+  ![Elastic Dashboard](images/404_Errors.png)
 
 These issues were logged through AWS Elastic Beanstalk and CloudWatch logs.
 
@@ -44,15 +48,16 @@ Ensured encryption at multiple levels:
 ## Security Architecture
 AWS WAF positioned between users and REDCap acted as the primary security gatekeeper. Traffic passing through WAF was vetted, malicious requests blocked, and legitimate requests allowed, stabilizing and securing the REDCap environment.
 
+![Elastic Dashboard](images/AWS_architecture.png) 
+
 ## Results and Observations
 Since implementation:
 - **Improved Security:** Reduction in SQLi, XSS, and unauthorized access attempts.
 - **Stabilized Environment:** Reduced HTTP 4xx errors and increased application stability.
 - **Cost Efficiency:** Optimized rule management to balance security and operational costs.
-
-## Screenshots
-Included screenshots illustrate:
-- AWS WAF & Shield dashboards showing the effectiveness of implemented security measures.
+  
+![Elastic Dashboard](images/AWS_Security_Console.png)
+AWS WAF & Shield dashboards showing the effectiveness of implemented security measures.
 
 ## Conclusion
 Integrating AWS WAF with Fortinet Managed Rules substantially improved the security posture of the REDCap deployment, effectively mitigating DDoS attacks and OWASP Top 10 vulnerabilities.
