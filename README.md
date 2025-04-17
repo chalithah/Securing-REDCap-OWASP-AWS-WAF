@@ -63,8 +63,8 @@ AWS WAF & Shield dashboards showing the effectiveness of implemented security me
 Integrating AWS WAF with Fortinet Managed Rules substantially improved the security posture of the REDCap deployment, effectively mitigating DDoS attacks and OWASP Top 10 vulnerabilities.
 
 ## References
-- [Deploying REDCap on AWS: A Comprehensive Guide](#)
-- [GitHub Repository for REDCap on AWS](#)
+- [Deploying REDCap on AWS: A Comprehensive Guide](https://medium.com/@chalithah/https://medium.com/@chalithah/deploying-redcap-research-electronic-data-capture-on-amazon-web-servers-aws-ac67f46d69ac)
+- [GitHub Repository for REDCap on AWS](https://github.com/chalithah/redcap-aws-cloudformation)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [AWS WAF Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/)
 - [AWS GuardDuty](https://aws.amazon.com/guardduty/)
