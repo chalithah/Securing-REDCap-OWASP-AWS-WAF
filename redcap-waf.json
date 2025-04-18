@@ -1,0 +1,38 @@
+{
+  "Name": "redcap-waf",
+  "Id": "ID",
+  "ARN": "arn.aws",
+  "DefaultAction": {
+    "Allow": {}
+  },
+  "Description": "This WAF is for redcap app",
+  "Rules": [
+    {
+      "Name": "Fortinet-all_rules",
+      "Priority": 1,
+      "Statement": {
+        "ManagedRuleGroupStatement": {
+          "VendorName": "Fortinet",
+          "Name": "all_rules"
+        }
+      },
+      "OverrideAction": {
+        "None": {}
+      },
+      "VisibilityConfig": {
+        "SampledRequestsEnabled": true,
+        "CloudWatchMetricsEnabled": true,
+        "MetricName": "Fortinet-all_rules"
+      }
+    }
+  ],
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "redcap-waf"
+  },
+  "Capacity": 1000,
+  "ManagedByFirewallManager": false,
+  "LabelNamespace": "awswaf:339712804877:webacl:redcap-waf:",
+  "RetrofittedByFirewallManager": false
+}
